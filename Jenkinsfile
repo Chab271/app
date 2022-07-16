@@ -9,7 +9,7 @@ pipeline {
             steps { 
                     sh"sudo docker build -t aymenchab/app2:1.1 ."                  
                     withDockerRegistry([url: "", credentialsId: "dockerhub-id"]) {
-                        sh"docker push aymenchab/images:1.1"
+                        sh"docker push aymenchab/app2:1.1"
                 }
             }
             }
