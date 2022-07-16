@@ -1,20 +1,20 @@
 apiVersion: apps/v1 
 kind: Deployment 
 metadata: 
- name: test-deployment 
+ name: test-deployment2
 spec: 
  replicas: 2
  strategy: 
   type: RollingUpdate 
  selector: 
   matchLabels: 
-   app: test-app 
+   app: test-app2 
  template: 
    metadata: 
     labels: 
-     app: test-app 
-     env: prod 
+     app: test-app2 
+     env: prod2 
    spec: 
     containers: 
-    - name: test-container 
+    - name: test-container2 
       image: aymenchab/app2:1.1
